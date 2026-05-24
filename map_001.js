@@ -13,7 +13,7 @@ map.dragRotate.disable();
 map.touchPitch.disable();
 map.touchZoomRotate.disableRotation();
 
-map.on('load', {
+map.on('load', async function () {
 
   // GSI シームレス空中写真
   map.addSource('gsi-photo', {
