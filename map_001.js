@@ -102,5 +102,5 @@ map.on('load', async () => {
   });
 
   // OCZ モジュール初期化
-  await OCZModule.init(map, { dlConcurrency: 4 });
+  OCZModule.init(map);
 });
