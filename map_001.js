@@ -1,5 +1,3 @@
-'use strict';
-
 const map = new maplibregl.Map({
   container: 'map',
   style: { version: 8, sources: {}, layers: [] },
@@ -15,7 +13,7 @@ map.dragRotate.disable();
 map.touchPitch.disable();
 map.touchZoomRotate.disableRotation();
 
-map.on('load', async () => {
+map.on('load', {
 
   // GSI シームレス空中写真
   map.addSource('gsi-photo', {
