@@ -2,24 +2,52 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>オープン地番Zoo 【閲覧】</title>
+<title>ＯＣＺビューア</title>
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
 <script src="https://unpkg.com/maplibre-gl@5.x/dist/maplibre-gl.js"></script>
 <link  href="https://unpkg.com/maplibre-gl@5.x/dist/maplibre-gl.css" rel="stylesheet" />
-
-<!-- pakoとモジュールをインポート -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
 <script src="https://chosashi-data.org/ocz/module/ver_007/ocz-module.js"></script>
-
-
 <link rel="stylesheet" href="style_001.css">
 
+<style>
+#panel {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.9);
+  border-radius: 6px;
+  padding: 10px 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  font-size: 13px;
+  line-height: 1.8;
+}
+#panel h1 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+#panel a {
+  color: #0066cc;
+  text-decoration: none;
+}
+#panel a:hover {
+  text-decoration: underline;
+}
+</style>
 </head>
-
 
 <body>
 <div id="map"></div>
+
+<div id="panel">
+  <h1>ＯＣＺビューア</h1>
+  <a href="https://office-shirado.com/ocz/" target="_blank">オープン地番Zoo</a><br>
+  <a href="https://github.com/office-shirado/view_ocz/" target="_blank">ＯＣＺ（GitHub）</a><br>
+  <a href="https://github.com/office-shirado/view_ocz/" target="_blank">ＺＧＴｉｌｅｓ方式（技術的資料：Qiita）</a>
+</div>
+
 <script src="map_001.js"></script>
 </body>
-
 </html>
